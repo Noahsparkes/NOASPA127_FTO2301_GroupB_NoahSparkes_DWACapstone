@@ -1,7 +1,9 @@
 
-document.getElementById("getPodcast").addEventListener("click", getPodcast);
 
-function getPodcast() {
+export const getPodcast = () => {
+
+ document.getElementById("getPodcast").addEventListener("click", getPodcast);
+
 fetch('https://podcast-api.netlify.app/shows')
     .then((res) => res.json())
     .then((data) => {
