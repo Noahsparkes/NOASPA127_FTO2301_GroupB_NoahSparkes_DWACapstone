@@ -1,0 +1,162 @@
+
+/*-------------nav bar-------------*/
+*{
+    font-family: Arial, Helvetica, sans-serif;
+  }  /*-----------------add font exclusively on here----------------------------------
+  /* Add some basic styles to the navigation bar */
+  ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+  }
+  
+  ul.navbar li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  ul.navbar li a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  ul.navbar li a:hover {
+    background-color: #4CAF50;
+    color:white;
+    border-radius: 18px;
+  }
+  
+  .navigation {
+    overflow: hidden;
+    background-color: #333;
+    top: 0;
+    position: sticky;
+  }
+  
+  /*-------------hero-banner-------------*/
+  
+  .hero-banner {
+    background-image: url('/images/istockphoto-640097034-612x612.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /*-------------Footer-------------*/
+  
+  /*form*/
+  #submit {
+    background-color:white ;
+    border-radius: 50px;
+    text-align: center;
+    padding: 10px 29px;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  
+  }
+  
+  #submit:hover{
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
+  
+  .form {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  
+  /*footer*/
+  .footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #24262b;  
+    font-family: 'Poppins', sans-serif; ;
+    height: 400px;
+    color: white;
+    text-align: center;
+  }
+  
+  
+  
+  /*podcast display*/
+  
+  .podImage {
+    width: 300px; ;
+    height: 300px;
+    border-radius: 80px;
+  }
+  
+  .podList {
+    display: table;
+    width: 100%;
+  
+  }
+  
+  /*podcast button*/
+  
+  #getPodcast{
+  background-color:white ;
+  border: 2px solid #24262b;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  border-radius: 50px;
+  height:70px ;
+  width:170px;
+  }
+  #getPodcast:hover{
+    background-color: #4CAF50; /* Green */
+  color: white;
+  }
+  
+  
+  /*------------API stiyling/podcast--------------*/
+  .podList {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 33px;
+  width: 33%; /* Adjust the width as needed */
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  transition: transform 0.2s;
+  cursor: pointer;
+  }
+  .podList:hover{
+  transform: scale(1.1);
+  }
+  .podList h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 5px;
+  }
+  
+  .podList p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+  }
+  
+  .podImage {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  }

@@ -1,21 +1,20 @@
 import React, { useEffect } from 'react';
-
-const API_URL = 'https://podcast-api.netlify.app/shows';
+import { getPodcast } from './api.js';
+import the css here Bro
+import 
 
 const App = () => {
-  
   useEffect(() => {
-    searchPodcasts("This Is Actually Happening");
+    getPodcast();
   }, []);
 
-  const searchPodcasts = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}`);
-    const data = await response.json();
-
-    console.log(data.Search);
-  };
-
-  return <h1>App</h1>;
+  return (
+    <div>
+      <h1>hello World</h1>
+      <div id="output"></div>
+      <button id="getPodcast" onClick={getPodcast}>Get Podcast</button>
+    </div>
+  );
 };
 
 export default App;
