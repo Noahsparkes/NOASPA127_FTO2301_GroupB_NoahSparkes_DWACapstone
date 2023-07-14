@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { getPodcast } from './api.js';
 import './styles/styles.css';
-
+import searchIcon from './search.svg'
 
 const App = () => {
   useEffect(() => {
@@ -28,6 +28,15 @@ const App = () => {
       <body>
         {/* Nav bar */}
         <nav className="navigation">
+
+        <div className="search">
+          <input
+           placeholder= "Search for Podcasts" value='Spiderman' onChange={()=>{}}
+          />
+          <img src={searchIcon} className="search-img"
+          alt='search'
+          />
+        </div>
           <ul className="navbar">
             <li>
               <a href="#home">Home</a>
@@ -39,7 +48,10 @@ const App = () => {
               <a href="#signup">Sign up</a>
             </li>
           </ul>
+          
         </nav>
+
+       
 
         {/* Hero banner */}
         <div className="hero-banner"></div>
@@ -79,6 +91,9 @@ const App = () => {
         </footer>
       </body>
     </html>
+
+
+
   );
 };
 
