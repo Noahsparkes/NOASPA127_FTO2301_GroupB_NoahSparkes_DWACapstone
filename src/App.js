@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { getPodcast } from './api.js';
+import './styles/styles.css';
 
 
 const App = () => {
