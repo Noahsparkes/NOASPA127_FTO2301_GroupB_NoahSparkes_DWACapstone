@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import { getPodcast } from './api.js';
 import './styles/styles.css';
 import searchIcon from './search.svg'
+
+
 
 const App = () => {
   useEffect(() => {
     getPodcast();
   }, []);
+  
+  const [searchTerm, setSearchTerm] = useState('');
 
   return (
     <html lang="en">
@@ -31,10 +35,11 @@ const App = () => {
 
         <div className="search">
           <input
-           placeholder= "Search for Podcasts" value='Spiderman' onChange={()=>{}}
+           placeholder= "Search for Podcasts" value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)}
           />
           <img src={searchIcon} className="search-img"
           alt='search'
+          onClick={()=> {}}
           />
         </div>
           <ul className="navbar">
@@ -51,7 +56,7 @@ const App = () => {
           
         </nav>
 
-       
+        
 
         {/* Hero banner */}
         <div className="hero-banner"></div>

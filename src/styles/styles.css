@@ -47,19 +47,19 @@
     box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
 }
 
-  
-  
   .search-img{
-    padding-left: 5px;;
+    padding-left: 5px;
+    cursor: pointer;
   }
+
   
   /*-------------hero-banner-------------*/
   
   .hero-banner {
-    background-image: url('');
+    background-image: url('/src/images/podcast-3332163_1280.png');
     background-size: cover;
     background-position: center;
-    height: 700px;
+    height: 1000px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -177,3 +177,15 @@
   height: auto;
   border-radius: 4px;
   }
+
+ /*------------mobile--------------*/
+
+@media (max-width:375px) {
+   .hero-banner{
+    background-image: url('/src/images/podcast-3332163_640.png');
+   }
+
+  
+
+
+}
