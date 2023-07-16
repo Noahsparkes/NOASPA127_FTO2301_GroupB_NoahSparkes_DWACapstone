@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./styles/styles.css";
 import Navbar from "./Navbar.js";
 import HeroBanner from "./HeroBanner.js";
@@ -25,7 +25,6 @@ const App = () => {
 
       <body>
         <Navbar />
-
         <HeroBanner />
         <PodcastList />
         <Newsletter />
