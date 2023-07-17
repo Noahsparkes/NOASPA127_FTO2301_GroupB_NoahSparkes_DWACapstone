@@ -4,10 +4,13 @@ import Navbar from "./Navbar.js";
 import HeroBanner from "./HeroBanner.js";
 import PodcastList from "./PodcastList.js";
 import Newsletter from "./Newsletter";
+import PodcastSearch from "./PodcastSearch";
+
 
 const App = () => {
+ 
   return (
-    <html lang="en">
+   <html lang="en">
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,13 +25,15 @@ const App = () => {
           rel="stylesheet"
         />
       </head>
-
+      
       <body>
         <Navbar />
+        <PodcastSearch />
         <HeroBanner />
         <PodcastList />
         <Newsletter />
       </body>
+      
     </html>
   );
 };

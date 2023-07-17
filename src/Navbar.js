@@ -4,6 +4,7 @@ import searchIcon from './search.svg';
 const Navbar = ({ searchTerm, setSearchTerm }) => {
   return (
     <nav className="navigation">
+      
       <div className="search">
         <input
           placeholder="Search for Podcasts"
