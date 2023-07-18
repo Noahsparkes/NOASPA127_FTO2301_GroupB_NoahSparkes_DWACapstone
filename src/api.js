@@ -4,7 +4,7 @@ export const getPodcast = () => {
 
  document.getElementById("getPodcast").addEventListener("click", getPodcast);
 
-fetch('https://podcast-api.netlify.app/shows')
+ fetch('https://podcast-api.netlify.app/shows')
     .then((res) => res.json())
     .then((data) => {
     let output = "<h2>Podcasts</h2>";

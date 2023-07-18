@@ -52,7 +52,14 @@
     cursor: pointer;
   }
 
+  /*-------------Load-state-------------*/
+
+.loading{
+  align-items: center;
+  display: flex;
+  justify-content: center;
   
+}
   /*-------------hero-banner-------------*/
   
   .hero-banner {

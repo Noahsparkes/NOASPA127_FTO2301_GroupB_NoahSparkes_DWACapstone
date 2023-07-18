@@ -1,26 +1,18 @@
-/*import React,{useEffect,useState} from 'react';
+/*import {useEffect,useState} from 'react';
 
 
 
-const LoadState =()=> {
-    const[post,setPost] =useState(null)
+function LoadState(){
+  const[loading, setLoading] = useState(false)
   useEffect(()=>{
-   fetch('https://podcast-api.netlify.app/shows')
-   .then(response=>response.json())
-   .then(response=>{
-    const{title}= response
-    setPost(title)
-   })
-    },[])
-    return (<>
-    <h1>hello</h1>
-    {post?post : "Loading..."}
-    </>
-    );
+    setloading(false)
+    setTimeout(()=>{
+   setLoading(false)
+    },5000)
+  },[])
+return(
+<div></div>
+
+);
 }
-
-
 export default LoadState;*/
-
-// loadstate far from working
-// reference the api from api.js and intergrate it with thi logic.
