@@ -24,7 +24,6 @@ const PodcastSearch = ({ setSearchTerm }) => {
 
   return (
     <div>
-      <h3>Podcast Names:</h3>
       <ul>
         {myOptions.map((podcastName, index) => (
           <li key={index}>{podcastName}</li>

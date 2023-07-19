@@ -14,11 +14,10 @@ export const getPodcast = () => {
         output += `
             <div class="podList">
             <h3>${preview.title}</h3>
-            <!--<p>${preview.description}</p>-->
             <h3>SEASONS: ${preview.seasons}</h3>
             <img class="podImage" src="${preview.image}" alt="Podcast Image">
             <h4>GENRE: ${preview.genre}</h4>
-            <button class="getPodcastData" data-id="${preview.id}">Get Podcast Data</button>
+            <button class="getPodcastData" data-id="${preview.id}">See more</button>
             </div>  
         `;
         });
