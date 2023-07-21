@@ -1,6 +1,6 @@
 
 
-export const getPodcast = () => {
+/*export const getPodcast = () => {
 
  document.getElementById("getPodcast").addEventListener("click", getPodcast);
 
@@ -45,4 +45,4 @@ export const getPodcast = () => {
     });
     })
     .catch((err) => console.log(err));
-}
+}*/

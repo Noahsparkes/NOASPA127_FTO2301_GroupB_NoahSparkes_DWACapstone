@@ -2,11 +2,14 @@ import React from "react";
 import "./styles/styles.css";
 import Navbar from "./Navbar.js";
 import HeroBanner from "./HeroBanner.js";
-import PodcastList from "./PodcastList.js";
-import Newsletter from "./Newsletter";
-import PodcastSearch from "./PodcastSearch";
+import PodcastList from "./PodcastList.js"; //api setup
+import PodcastDetail from "./PodcastDetail"; //display podcast dets
+import Newsletter from "./Newsletter"; //footer content
+import PodcastSearch from "./PodcastSearch"; // searchbar
 import {useState, useEffect} from "react";
-import ClipLoader from "react-spinners/ClipLoader";
+import ClipLoader from "react-spinners/ClipLoader"; //laodstate
+
+
 
 const App = () => {
   const[loading, setLoading] = useState(false)
@@ -43,7 +46,9 @@ const App = () => {
             <PodcastSearch />
             <HeroBanner />
             <PodcastList />
+            <PodcastDetail />
             <Newsletter />
+            
           </body>
         </>
       )}
