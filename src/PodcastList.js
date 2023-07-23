@@ -29,7 +29,7 @@ const PodcastList = ({ handlePodcastDataClick }) => {
         ))
       )}
     </div>
-  );
+  ); 
 };
 
 export default PodcastList;

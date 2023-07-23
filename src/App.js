@@ -1,30 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react"; // Don't forget to import useState and useEffect
 import "./styles/styles.css";
 import Navbar from "./Navbar.js";
 import HeroBanner from "./HeroBanner.js";
-import PodcastList from "./PodcastList.js"; //api setup
-import PodcastDetail from "./PodcastDetail"; //display podcast dets
-import Newsletter from "./Newsletter"; //footer content
-import PodcastSearch from "./PodcastSearch"; // searchbar
-import {useState, useEffect} from "react";
-import ClipLoader from "react-spinners/ClipLoader"; //laodstate
-
-
+import PodcastList from "./PodcastList.js"; // api setup
+import PodcastDetail from "./PodcastDetail"; // display podcast dets
+import Newsletter from "./Newsletter"; // footer content
+import ClipLoader from "react-spinners/ClipLoader"; // loadstate
 
 const App = () => {
-  const[loading, setLoading] = useState(false)
-  useEffect(()=>{
-    setLoading(true)
-   setTimeout(()=>{
-    setLoading(false)
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
 
-   },5000)
-
-  },[])
   return (
     <div className="loading">
       {loading ? (
-        <ClipLoader color={'#ff781f'} loading={loading}  size={100}/>
+        <ClipLoader color={"#ff781f"} loading={loading} size={100} />
       ) : (
         <>
           <head>
@@ -43,16 +38,15 @@ const App = () => {
           </head>
           <body>
             <Navbar />
-            <PodcastSearch />
             <HeroBanner />
             <PodcastList />
             <PodcastDetail />
             <Newsletter />
-            
           </body>
         </>
       )}
     </div>
   );
 };
+
 export default App;
