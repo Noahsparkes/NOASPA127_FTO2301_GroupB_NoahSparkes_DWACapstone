@@ -3,9 +3,13 @@ import "./styles/styles.css";
 import Navbar from "./Navbar.js";
 import HeroBanner from "./HeroBanner.js";
 import PodcastList from "./PodcastList.js"; // api setup
-import PodcastDetail from "./PodcastDetail"; // display podcast dets
+import PodcastInfo from "./PodcastInfo"; // display podcast dets
+
 import Newsletter from "./Newsletter"; // footer content
 import ClipLoader from "react-spinners/ClipLoader"; // loadstate
+
+
+
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -40,8 +44,11 @@ const App = () => {
             <Navbar />
             <HeroBanner />
             <PodcastList />
-            <PodcastDetail />
+            <PodcastInfo />
             <Newsletter />
+            
+
+            
           </body>
         </>
       )}

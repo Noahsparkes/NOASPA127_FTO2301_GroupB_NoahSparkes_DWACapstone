@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 const PodcastList = ({ handlePodcastDataClick }) => {
   const [podcasts, setPodcasts] = useState([]);
 
@@ -22,14 +23,19 @@ const PodcastList = ({ handlePodcastDataClick }) => {
             <h3>SEASONS: {preview.seasons}</h3>
             <img className="podImage" src={preview.image} alt="" />
             <h4>GENRE: {preview.genre}</h4>
-            <button className="getPodcastData" data-id={preview.id} onClick={handlePodcastDataClick}>
+            <button
+              className="getPodcastData"
+              data-id={preview.id}
+              onClick={() => handlePodcastDataClick(preview.id)} // Pass the podcast id when the button is clicked
+            >
               see more
             </button>
           </div>
         ))
       )}
     </div>
-  ); 
+  );
 };
 
 export default PodcastList;
+
