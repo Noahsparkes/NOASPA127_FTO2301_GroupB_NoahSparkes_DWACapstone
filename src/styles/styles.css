@@ -133,7 +133,12 @@
     width: 100%;
   
   }
-  
+  .season-image{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
   /*podcast button*/
   
   #getPodcast{

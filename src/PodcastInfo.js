@@ -12,7 +12,25 @@ const PodcastInfo = ({ podcastInfo }) => {
           <p>
             <strong>Description:</strong> {podcastInfo.description}
           </p>
-          {/* Display other podcast information from podcastInfo object */}
+          {podcastInfo.seasons.map((season) => (
+            <div key={season.season}>
+              <h3>{season.title}</h3>
+              {season.image && <img className="season-image" src={season.image} alt={`Season ${season.season}`} />}
+              {season.episodes.map((episode) => (
+                <div key={episode.episode}>
+                  <p>
+                    <strong>Episode {episode.episode}:</strong> {episode.title}
+                  </p>
+                  <p>{episode.description}</p>
+                  {/* Display the podcast mp3 file link */}
+                  <audio controls>
+                    <source src={episode.file} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+              ))}
+            </div>
+          ))}
         </>
       ) : (
         <p>No podcast information available.</p>
