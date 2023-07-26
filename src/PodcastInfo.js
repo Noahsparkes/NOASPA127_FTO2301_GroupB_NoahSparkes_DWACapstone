@@ -1,32 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-const PodcastInfo = ({ podcastId }) => {
-  const [podcastData, setPodcastData] = useState(null);
-
-  useEffect(() => {
-    const apiEndpoint = `https://podcast-api.netlify.app/id/${podcastId}/`;
-
-    // Use Fetch API to retrieve JSON data
-    fetch(apiEndpoint)
-      .then(response => response.json())
-      .then(json => {
-        setPodcastData(json);
-      })
-      .catch(error => console.error('Error fetching data:', error));
-  }, [podcastId]); // Add podcastId as a dependency to fetch when it changes
-
+const PodcastInfo = ({ podcastInfo }) => {
   return (
     <div>
-      {podcastData ? (
+      {podcastInfo ? (
         <>
           <h2>Podcast Information</h2>
-          <p className="message box">
-            {JSON.stringify(podcastData)}
+          <p>
+            <strong>Title:</strong> {podcastInfo.title}
           </p>
-          {/* Display other podcast information as needed */}
+          <p>
+            <strong>Description:</strong> {podcastInfo.description}
+          </p>
+          {/* Display other podcast information from podcastInfo object */}
         </>
       ) : (
-        <p>Loading podcast information...</p>
+        <p>No podcast information available.</p>
       )}
     </div>
   );
