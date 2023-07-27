@@ -195,7 +195,10 @@
 
 @media (max-width:375px) {
    .hero-banner{
-    background-image: url('/src/images/podcast-3332163_1280_615-300x144\ \(1\).png');
+    background-image: url('/Users/noah/Dynamic Web Apps/dwa-project23/src/images/podcast-3332163_376_181_SE.png');
+    width: 375px;
+    aspect-ratio: auto 375 / 180;
+    height: 180px;
    }
 
   

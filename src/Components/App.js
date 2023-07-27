@@ -3,9 +3,12 @@ import "/Users/noah/Dynamic Web Apps/dwa-project23/src/styles/styles.css";//CSS
 import Navbar from "./Navbar.js"; // nav bar
 import HeroBanner from "./HeroBanner.js"; // hero banner
 import PodcastList from "./PodcastList.js"; // podcast list
+
 import PodcastInfo from "./PodcastInfo"; // podcast info/details
 import Newsletter from "./Newsletter"; // footer
 import ClipLoader from "react-spinners/ClipLoader"; // loadstate
+
+
 
 const App = () => {
   const [loading, setLoading] = useState(false);
