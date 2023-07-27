@@ -9,7 +9,7 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
         <input
           placeholder="Search for Podcasts"
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+         
         />
         <img
           src={searchIcon}

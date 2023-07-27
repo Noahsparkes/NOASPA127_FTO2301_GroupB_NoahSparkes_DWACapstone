@@ -14,10 +14,10 @@ const App = () => {
 
   useEffect(() => {
     setLoading(true);
-    // Simulate loading for 5 seconds (you can remove this setTimeout in your actual app)
+    // Simulate loading for 3 seconds
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 3000);
   }, []);
 
   // Define the handlePodcastDataClick function here

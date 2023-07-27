@@ -25,7 +25,7 @@ const PodcastInfo = ({ podcastInfo }) => {
                   {/* Display the podcast mp3 file link */}
                   <audio controls>
                     <source src={episode.file} type="audio/mpeg" />
-                    Your browser does not support the audio element.
+                    Sorry. Your browser does not support the audio element.
                   </audio>
                 </div>
               ))}
