@@ -45,7 +45,7 @@ const App = () => {
       ) : (
         <>
           <head>
-            {/* Rest of the code... */}
+            {/* Rest of the header... */}
           </head>
           <body>
             <Navbar />
