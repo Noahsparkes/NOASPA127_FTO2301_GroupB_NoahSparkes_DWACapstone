@@ -1,5 +1,5 @@
 import React from 'react';
-import searchIcon from './search.svg';
+import searchIcon from '/Users/noah/Dynamic Web Apps/dwa-project23/src/images/search.svg';
 
 const Navbar = ({ searchTerm, setSearchTerm }) => {
   return (

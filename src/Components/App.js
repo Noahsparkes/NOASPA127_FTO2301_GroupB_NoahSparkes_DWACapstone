@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./styles/styles.css";
+import "/Users/noah/Dynamic Web Apps/dwa-project23/src/styles/styles.css";//CSS
 import Navbar from "./Navbar.js"; // nav bar
 import HeroBanner from "./HeroBanner.js"; // hero banner
 import PodcastList from "./PodcastList.js"; // podcast list
