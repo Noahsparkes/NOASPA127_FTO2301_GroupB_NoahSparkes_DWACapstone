@@ -49,7 +49,7 @@ const App = () => {
           </head>
           <body>
             <Navbar />
-            <HeroBanner />
+            <HeroBanner className="hero-banner" />
             {/* Conditionally render PodcastList or PodcastInfo based on showPodcastInfo state */}
             {showPodcastInfo ? (
               <PodcastInfo podcastInfo={podcastInfo} />

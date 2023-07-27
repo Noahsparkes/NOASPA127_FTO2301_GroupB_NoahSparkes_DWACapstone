@@ -20,13 +20,13 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
       </div>
       <ul className="navbar">
         <li>
-          <a href="#home">Home</a>
+          <a href="#hero-banner">Home</a>
         </li>
         <li>
           <a href="#listen">Listen</a>
         </li>
         <li>
-          <a href="#signup">Sign up</a>
+          <a href="#footer">Sign up</a>
         </li>
       </ul>
     </nav>
