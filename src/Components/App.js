@@ -32,7 +32,7 @@ const App = () => {
   // Your function to fetch data from the API endpoint
   const fetchDataFromApi = async () => {
     try {
-      const response = await fetch("YOUR_API_ENDPOINT_URL");
+      const response = await fetch("");    //functunallity working however styling is broken.
       const data = await response.json();
       return data;
     } catch (error) {

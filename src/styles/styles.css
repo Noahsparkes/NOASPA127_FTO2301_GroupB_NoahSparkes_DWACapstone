@@ -286,6 +286,33 @@ h2 {
   color: white;
 }
 
+.favorite-button {
+  cursor: pointer;
+  transition-duration: 0.4s;
+  padding:10px 20px;
+  border-radius: 20px;
+  border: none;
+}
+
+.favorite-button:hover {
+  background-color: #dc380f;
+  /* Green */
+  color: white;
+}
+
+.unfavorite-button {
+  cursor: pointer;
+  transition-duration: 0.4s;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+}
+
+.unfavorite-button:hover {
+  background-color: #4CAF50;
+  /* Green */
+  color: white;
+}
 /*------------mobile Iphone sE--------------*/
 
 @media (max-width:375px) {

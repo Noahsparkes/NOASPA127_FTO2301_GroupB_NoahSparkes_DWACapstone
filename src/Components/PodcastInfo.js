@@ -24,6 +24,8 @@ const PodcastList = ({ podcastInfo }) => {
     localStorage.setItem('favoriteEpisodes', JSON.stringify(favoriteEpisodes));
   };
 
+  const isEpisodeFavorited = (episodeId) => favoriteEpisodes.includes(episodeId);
+
   return (
     <div className="podcast-info">
       {podcastInfo ? (
@@ -37,7 +39,7 @@ const PodcastList = ({ podcastInfo }) => {
           </p>
           {podcastInfo.seasons.slice(0, currentSeason + 1).map((season) => (
             <div key={season.season} className="season">
-              <h3 className="season-title">Season {season.season}: {season.title}</h3>
+              <h3 className="season-title">Season {season.season}:</h3>
               {season.image && <img className="season-image" src={season.image} alt={`Season ${season.season}`} />}
               {season.episodes.map((episode) => (
                 <div key={episode.episode} className="episode">
@@ -45,8 +47,8 @@ const PodcastList = ({ podcastInfo }) => {
                     <strong>Episode {episode.episode}:</strong> {episode.title}
                   </p>
                   <p className="episode-description">{episode.description}</p>
-                  <button onClick={() => handleToggleFavorite(episode.episode)}>
-                    {favoriteEpisodes.includes(episode.episode) ? 'Unfavorite' : 'Favorite'}
+                  <button onClick={() => handleToggleFavorite(episode.episode)} className={isEpisodeFavorited(episode.episode) ? "favorite-button" : "unfavorite-button"}>
+                    {isEpisodeFavorited(episode.episode) ? 'Unfavorite' : 'Favorite'}
                   </button>
                   {/* Display the podcast mp3 file link */}
                   <audio className="audio-file" controls>
