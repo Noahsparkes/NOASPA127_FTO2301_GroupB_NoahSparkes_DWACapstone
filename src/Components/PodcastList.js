@@ -13,7 +13,7 @@ const PodcastList = ({ handlePodcastDataClick }) => {
 
   return (
     <div>
-      <h2  id="listen">Podcasts</h2>
+      
       {podcasts.length === 0 ? (
         <p>No podcasts found.</p>
       ) : (
