@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 
 const PodcastInfo = ({ podcastInfo }) => {
+  const [currentSeason, setCurrentSeason] = useState(0);
+
+  const handleLoadMore = () => {
+    setCurrentSeason((prevSeason) => prevSeason + 1);
+  };
+
   return (
     <div className="podcast-info">
       {podcastInfo ? (
@@ -12,9 +19,9 @@ const PodcastInfo = ({ podcastInfo }) => {
           <p>
             <strong>Description:</strong> {podcastInfo.description}
           </p>
-          {podcastInfo.seasons.map((season) => (
+          {podcastInfo.seasons.slice(0, currentSeason + 1).map((season) => (
             <div key={season.season} className="season">
-              <h3 className="season-title">Season {season.season}</h3>
+              <h3 className="season-title">Season {season.season}: {season.title}</h3>
               {season.image && <img className="season-image" src={season.image} alt={`Season ${season.season}`} />}
               {season.episodes.map((episode) => (
                 <div key={episode.episode} className="episode">
@@ -31,6 +38,11 @@ const PodcastInfo = ({ podcastInfo }) => {
               ))}
             </div>
           ))}
+          {currentSeason < podcastInfo.seasons.length - 1 && (
+            <button className="load-more-button" onClick={handleLoadMore}>
+              Load More
+            </button>
+          )}
         </>
       ) : (
         <p>No podcast information available.</p>
