@@ -21,7 +21,7 @@ const PodcastInfo = ({ podcastInfo }) => {
           </p>
           {podcastInfo.seasons.slice(0, currentSeason + 1).map((season) => (
             <div key={season.season} className="season">
-              <h3 className="season-title">Season {season.season}: {season.title}</h3>
+              <h3 className="season-title">Season {season.season}</h3>
               {season.image && <img className="season-image" src={season.image} alt={`Season ${season.season}`} />}
               {season.episodes.map((episode) => (
                 <div key={episode.episode} className="episode">
