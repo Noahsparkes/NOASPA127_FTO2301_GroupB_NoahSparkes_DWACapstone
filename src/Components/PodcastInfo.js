@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-const PodcastInfo = ({ podcastInfo }) => {
+const PodcastList = ({ podcastInfo }) => {
+  const [currentSeason, setCurrentSeason] = useState(0);
   const [favoriteEpisodes, setFavoriteEpisodes] = useState([]);
 
   useEffect(() => {
@@ -9,6 +10,10 @@ const PodcastInfo = ({ podcastInfo }) => {
       setFavoriteEpisodes(JSON.parse(storedFavorites));
     }
   }, []);
+
+  const handleLoadMore = () => {
+    setCurrentSeason((prevSeason) => prevSeason + 1);
+  };
 
   const handleToggleFavorite = (episodeId) => {
     if (favoriteEpisodes.includes(episodeId)) {
@@ -30,9 +35,9 @@ const PodcastInfo = ({ podcastInfo }) => {
           <p>
             <strong>Description:</strong> {podcastInfo.description}
           </p>
-          {podcastInfo.seasons.map((season) => (
+          {podcastInfo.seasons.slice(0, currentSeason + 1).map((season) => (
             <div key={season.season} className="season">
-              <h3 className="season-title">Season {season.season}:</h3>
+              <h3 className="season-title">Season {season.season}: {season.title}</h3>
               {season.image && <img className="season-image" src={season.image} alt={`Season ${season.season}`} />}
               {season.episodes.map((episode) => (
                 <div key={episode.episode} className="episode">
@@ -52,6 +57,11 @@ const PodcastInfo = ({ podcastInfo }) => {
               ))}
             </div>
           ))}
+          {currentSeason < podcastInfo.seasons.length - 1 && (
+            <button className="load-more-button" onClick={handleLoadMore}>
+              Load More
+            </button>
+          )}
         </>
       ) : (
         <p>No podcast information available.</p>
@@ -60,4 +70,4 @@ const PodcastInfo = ({ podcastInfo }) => {
   );
 };
 
-export default PodcastInfo;
+export default PodcastList;

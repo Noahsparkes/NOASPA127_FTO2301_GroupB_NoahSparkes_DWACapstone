@@ -38,4 +38,3 @@ const PodcastList = ({ handlePodcastDataClick }) => {
 };
 
 export default PodcastList;
-
