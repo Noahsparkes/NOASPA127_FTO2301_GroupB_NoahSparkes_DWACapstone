@@ -19,10 +19,10 @@ const PodcastList = ({ handlePodcastDataClick }) => {
       ) : (
         podcasts.map((preview) => (
           <div key={preview.id} className="podList">
-            <h3>{preview.title}</h3>
-            <h3>SEASONS: {preview.seasons}</h3>
+            <h3 id="podList-title">{preview.title}</h3>
+            <h3 id="podlist-season">SEASONS: {preview.seasons}</h3>
             <img className="podImage" src={preview.image} alt="" />
-            <h4>GENRE: {preview.genre}</h4>
+            <h4 id="podlist-genre">GENRE: {preview.genres}</h4>
             <button
               className="getPodcastData"
               data-id={preview.id}

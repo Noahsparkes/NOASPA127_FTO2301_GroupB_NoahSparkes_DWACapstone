@@ -190,8 +190,60 @@
   height: auto;
   border-radius: 4px;
   }
+/*------------Podcast Details page--------------*/
 
- /*------------mobile--------------*/
+
+.podcast-info {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.season {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.season-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.season-image {
+  max-width: 200px; /*---*/
+  display: flex;
+  justify-items:left;
+  margin: 10px auto;
+}
+
+.episode {
+  margin-top: 10px;
+  border: 1px solid #eee;
+  padding: 5px;
+}
+
+.episode-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.episode-description {
+  font-size: 14px;
+}
+
+.audio-file {
+  width: 75%;
+  margin-top: 10px;
+}
+ /*------------mobile Iphone sE--------------*/
 
 @media (max-width:375px) {
    .hero-banner{
@@ -201,7 +253,13 @@
     height: 180px;
    }
 
+   .podList-title {
+    font-size: 6px;
+  }
   
-
+  .podList {
+    width: 50%;
+    
+  }
 
 }
