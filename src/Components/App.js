@@ -1,27 +1,44 @@
+// App.js
 import React, { useState, useEffect } from "react";
-import "/Users/noah/Dynamic Web Apps/dwa-project23/src/styles/styles.css";//CSS
-import Navbar from "./Navbar.js"; // nav bar
-import HeroBanner from "./HeroBanner.js"; // hero banner
-import PodcastList from "./PodcastList.js"; // podcast list
-
-import PodcastInfo from "./PodcastInfo"; // podcast info/details
-import Newsletter from "./Newsletter"; // footer
-import ClipLoader from "react-spinners/ClipLoader"; // loadstate
-
-
+import "/Users/noah/Dynamic Web Apps/dwa-project23/src/styles/styles.css";
+import Navbar from "./Navbar.js";
+import HeroBanner from "./HeroBanner.js";
+import PodcastList from "./PodcastList.js";
+import PodcastInfo from "./PodcastInfo";
+import Newsletter from "./Newsletter";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const App = () => {
   const [loading, setLoading] = useState(false);
   const [podcastInfo, setPodcastInfo] = useState(null);
-  const [showPodcastInfo, setShowPodcastInfo] = useState(false); // State to control when to show podcast info
+  const [showPodcastInfo, setShowPodcastInfo] = useState(false);
+  const [data, setData] = useState([]); // State to store the fetched data
+  const [searchTerm, setSearchTerm] = useState(''); // State to handle search term
 
   useEffect(() => {
     setLoading(true);
-    // Simulate loading for 3 seconds
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+    // Fetch data from the API endpoint
+    fetchDataFromApi()
+      .then((data) => {
+        setData(data); // Set the fetched data in state
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+      });
   }, []);
+
+  // Your function to fetch data from the API endpoint
+  const fetchDataFromApi = async () => {
+    try {
+      const response = await fetch("YOUR_API_ENDPOINT_URL");
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      throw new Error("Error fetching data from the API.");
+    }
+  };
 
   // Define the handlePodcastDataClick function here
   const handlePodcastDataClick = (podcastId) => {
@@ -51,7 +68,8 @@ const App = () => {
             {/* Rest of the header... */}
           </head>
           <body>
-            <Navbar />
+            {/* Pass the 'data' and 'setSearchTerm' props to the Navbar component */}
+            <Navbar data={data} setSearchTerm={setSearchTerm} />
             <HeroBanner className="hero-banner" />
             {/* Conditionally render PodcastList or PodcastInfo based on showPodcastInfo state */}
             {showPodcastInfo ? (
