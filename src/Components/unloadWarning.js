@@ -1,17 +1,24 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const UnloadWarning = () => {
   useEffect(() => {
     const handleBeforeUnload = (event) => {
+      // Custom warning message for the prompt
       event.preventDefault();
-      // Most browsers require the return value to be set for the prompt to show
-      event.returnValue = '';
+      event.returnValue = 'You have unsaved changes. Are you sure you want to leave?';
+    };
+
+    const handleUnload = () => {
+      // Alert message for the tab closing event
+      alert('You are leaving the page.');
     };
 
     window.addEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener('unload', handleUnload);
 
     return () => {
       window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener('unload', handleUnload);
     };
   }, []);
 

@@ -8,7 +8,7 @@ import PodcastInfo from "./PodcastInfo";
 import Newsletter from "./Newsletter";
 import ClipLoader from "react-spinners/ClipLoader";
 import FavoritesList from "./FavouriteList.js";
-
+import UnloadWarning from "./unloadWarning.js"; 
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -81,6 +81,7 @@ const App = () => {
             )}
             <Newsletter />
             <FavoritesList />
+            <UnloadWarning  />
           </body>
         </>
       )}

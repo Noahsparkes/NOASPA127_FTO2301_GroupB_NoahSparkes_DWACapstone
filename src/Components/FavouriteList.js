@@ -35,4 +35,5 @@ const FavoritesList = () => {
 
 export default FavoritesList;
 
-{/*extended look at all of this snippet for improvement */}
+
+//extended look at all of this snippet for improvement 
