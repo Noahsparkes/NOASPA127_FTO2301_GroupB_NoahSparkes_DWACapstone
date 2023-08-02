@@ -7,6 +7,8 @@ import PodcastList from "./PodcastList.js";
 import PodcastInfo from "./PodcastInfo";
 import Newsletter from "./Newsletter";
 import ClipLoader from "react-spinners/ClipLoader";
+import FavoritesList from "./FavouriteList.js";
+
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -78,6 +80,7 @@ const App = () => {
               <PodcastList handlePodcastDataClick={handlePodcastDataClick} />
             )}
             <Newsletter />
+            <FavoritesList />
           </body>
         </>
       )}
