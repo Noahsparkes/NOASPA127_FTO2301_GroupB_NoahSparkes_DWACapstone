@@ -26,7 +26,8 @@ const PodcastList = ({ handlePodcastDataClick }) => {
             <button
               className="getPodcastData"
               data-id={preview.id}
-              onClick={() => handlePodcastDataClick(preview.id)} // Pass the podcast id when the button is clicked
+              onClick={() => {handlePodcastDataClick(preview.id)
+            }} // Pass the podcast id when the button is clicked
             >
               see more
             </button>

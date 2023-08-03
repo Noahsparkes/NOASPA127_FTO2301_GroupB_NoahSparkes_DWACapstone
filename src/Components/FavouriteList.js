@@ -11,21 +11,33 @@ const FavoritesList = () => {
     }
   }, []);
 
+  // Function to handle clearing all favorite episodes
+  const clearFavorites = () => {
+    setFavoriteEpisodes([]);
+    localStorage.removeItem('favoriteEpisodes');
+  };
+
   return (
     <div className="favorites-list">
-      <h2>Your Favorite's List</h2>
+      <h2>Your Favorites List</h2>
       {favoriteEpisodes.length > 0 ? (
-        <ul>
-          {favoriteEpisodes.map((episode) => (
-            <li key={episode.episode}>
-              <strong>Show Name:</strong> {episode.showName}
-              <br />
-              <strong>Season:</strong> {episode.season}  {/*check these!*/ }
-              <br />
-              <strong>Episode Number:</strong> {episode.episode}
-            </li>
-          ))}
-        </ul>
+        <>
+          <ul>
+            {favoriteEpisodes.map((episode) => (
+              // Add a check for null before accessing properties
+              episode && (
+                <li key={episode.episode}>
+                  <strong>Show Name:</strong> {episode.showName}
+                  <br />
+                  <strong>Season:</strong> {episode.season}
+                  <br />
+                  <strong>Episode Number:</strong> {episode.episode}
+                </li>
+              )
+            ))}
+          </ul>
+          <button onClick={clearFavorites}>Clear Favorites</button>
+        </>
       ) : (
         <p>No favorite episodes yet.</p>
       )}
@@ -34,6 +46,7 @@ const FavoritesList = () => {
 };
 
 export default FavoritesList;
+
 
 
 //extended look at all of this snippet for improvement 
