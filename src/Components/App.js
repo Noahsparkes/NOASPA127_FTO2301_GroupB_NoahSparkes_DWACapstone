@@ -83,7 +83,6 @@ const App = () => {
             <Newsletter />
             <FavoritesList />
             <UnloadWarning  />
-            
           </body>
         </>
       )}
