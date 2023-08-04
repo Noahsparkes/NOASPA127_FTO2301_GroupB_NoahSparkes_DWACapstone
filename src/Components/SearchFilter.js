@@ -11,7 +11,6 @@ const SearchFilter = ({ data, searchTerm }) => {
       {filteredData.map((item) => (
         <div key={item.id}>
           <h3>{item.title}</h3>
-          <p>{item.description}</p>
           {/* Add other fields from the item object as needed */}
         </div>
       ))}

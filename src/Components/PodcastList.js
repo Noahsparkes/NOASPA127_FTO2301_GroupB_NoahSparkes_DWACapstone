@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 const PodcastList = ({ handlePodcastDataClick }) => {
   const [podcasts, setPodcasts] = useState([]);
 
@@ -13,7 +12,6 @@ const PodcastList = ({ handlePodcastDataClick }) => {
 
   return (
     <div>
-      
       {podcasts.length === 0 ? (
         <p>No podcasts found.</p>
       ) : (
@@ -23,11 +21,15 @@ const PodcastList = ({ handlePodcastDataClick }) => {
             <h3 id="podlist-season">SEASONS: {preview.seasons}</h3>
             <img className="podImage" src={preview.image} alt="" />
             <h4 id="podlist-genre">GENRE: {preview.genres}</h4>
+            <p>Last Update: {new Date(preview.updated).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}</p>
             <button
               className="getPodcastData"
               data-id={preview.id}
-              onClick={() => {handlePodcastDataClick(preview.id)
-            }} // Pass the podcast id when the button is clicked
+              onClick={() => handlePodcastDataClick(preview.id)}
             >
               see more
             </button>

@@ -65,21 +65,6 @@ ul.navbar li a:hover {
 
 /*-------------hero-banner-------------*/
 
-/*.hero-banner {
-  background-image: url('/src/images/podcast-3332163_1280.png');
-  background-size: cover;
-  background-position: center;
-  height: 1000px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 20px;
-}
-*/
-
 /* Carousel for header */
 .header {
   position: relative;
