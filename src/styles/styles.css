@@ -80,7 +80,7 @@ ul.navbar li a:hover {
 }
 */
 
-/* Carousel.css */
+/* Carousel for header */
 .header {
   position: relative;
   height: 300px;
@@ -88,8 +88,8 @@ ul.navbar li a:hover {
 }
 
 .header img {
-  width: 100%;
   height: 100%;
+  width:100%;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -337,11 +337,10 @@ h2 {
 /*------------mobile Iphone sE--------------*/
 
 @media (max-width:375px) {
-  .hero-banner {
-    background-image: url('/Users/noah/Dynamic Web Apps/dwa-project23/src/images/podcast-3332163_376_181_SE.png');
-    width: 375px;
-    aspect-ratio: auto 375 / 180;
-    height: 180px;
+  .header img  {
+   
+    height: 100%;
+    width: 100%;
   }
 
   .podList-title {
