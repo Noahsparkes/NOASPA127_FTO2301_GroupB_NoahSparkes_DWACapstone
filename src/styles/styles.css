@@ -235,7 +235,24 @@ ul.navbar li a:hover {
 #AZ-btn:hover{
  transition-duration: 0.4s;
  color:white;
- background-color: #4CAF50;    
+ background-color: #4CAF50;  
+
+}
+
+
+#date-btn{
+  background-color:white;
+  border: none;
+  border-radius: 80px;
+   margin-top: 70px;
+   padding: 20px;
+   cursor: pointer;
+ }
+ 
+ #date-btn:hover{
+  transition-duration: 0.4s;
+  color:white;
+  background-color: #4CAF50;  
 }
  .header img{
   
