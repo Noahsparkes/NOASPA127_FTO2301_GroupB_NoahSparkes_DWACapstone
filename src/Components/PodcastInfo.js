@@ -24,7 +24,7 @@ const PodcastList = ({ podcastInfo }) => {
     localStorage.setItem('favoriteEpisodes', JSON.stringify(favoriteEpisodes));
   };
 
-  const isEpisodeFavorited = (episodeId) => favoriteEpisodes.includes(episodeId);
+  const isEpisodeFavorited = (episodeId) => favoriteEpisodes.includes(episodeId);  
 
   return (
     <div className="podcast-info">

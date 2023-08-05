@@ -9,6 +9,8 @@ import Newsletter from "./Newsletter";
 import ClipLoader from "react-spinners/ClipLoader";
 import FavoritesList from "./FavouriteList.js"
 import UnloadWarning from "./UnloadWarning.js"; 
+import PodcastPlayer from "./PodcastPlayer.js";
+
 //episodePlayer
 
 const App = () => {
@@ -61,8 +63,16 @@ const App = () => {
       });
   };
 
+
+  //Podcast playback
+  const sampleEpisode = {
+    id: 10716,
+    audioUrl: 'https://podcast-api.netlify.app/placeholder-audio.mp3',
+    title: 'Maple & Finn',
+  }
+
   return (
-    <div className="loading">
+    <div className="loading"> 
       {loading ? (
         <ClipLoader color={"#ff781f"} loading={loading} size={100} />
       ) : (
@@ -83,6 +93,7 @@ const App = () => {
             <Newsletter />
             <FavoritesList />
             <UnloadWarning  />
+            <PodcastPlayer episode={sampleEpisode} />
           </body>
         </>
       )}
