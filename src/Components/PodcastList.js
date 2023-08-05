@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 const PodcastList = ({ handlePodcastDataClick }) => {
   const [podcasts, setPodcasts] = useState([]);
   const [sortAsc, setSortAsc] = useState(true);
+  const [sortDateAsc, setSortDateAsc] = useState(true);
 
   useEffect(() => {
     fetch('https://podcast-api.netlify.app/shows')
@@ -10,7 +11,7 @@ const PodcastList = ({ handlePodcastDataClick }) => {
       .then((data) => setPodcasts(data))
       .catch((err) => console.log(err));
   }, []);
-// sorting toggle 
+
   const handleSort = () => {
     const sortedPodcasts = [...podcasts];
     sortedPodcasts.sort((a, b) => {
@@ -24,10 +25,26 @@ const PodcastList = ({ handlePodcastDataClick }) => {
     setSortAsc(!sortAsc); // Toggle the sorting order
   };
 
+  const handleSortByDate = () => {
+    const sortedPodcasts = [...podcasts];
+    sortedPodcasts.sort((a, b) => {
+      if (sortDateAsc) {
+        return new Date(a.updated) - new Date(b.updated);
+      } else {
+        return new Date(b.updated) - new Date(a.updated);
+      }
+    });
+    setPodcasts(sortedPodcasts);
+    setSortDateAsc(!sortDateAsc); // Toggle the sorting order
+  };
+
   return (
     <div>
-      <button onClick={handleSort}>
+      <button id="AZ-btn" onClick={handleSort}>
         {sortAsc ? 'A-Z' : 'Z-A'}
+      </button>
+      <button id="date-btn" onClick={handleSortByDate}>
+        {sortDateAsc ? 'Date Asc' : 'Date Desc'}
       </button>
       {podcasts.length === 0 ? (
         <p>No podcasts found.</p>

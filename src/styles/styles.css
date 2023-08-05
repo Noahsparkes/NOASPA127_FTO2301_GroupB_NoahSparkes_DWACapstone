@@ -221,6 +221,26 @@ ul.navbar li a:hover {
   border-radius: 4px;
 }
 
+/*---sorting buttons---*/
+
+#AZ-btn{
+ background-color:white;
+ border: none;
+ border-radius: 80px;
+  margin-top: 70px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+#AZ-btn:hover{
+ transition-duration: 0.4s;
+ color:white;
+ background-color: #4CAF50;    
+}
+ .header img{
+  
+ }
+
 /*------------Podcast Details page--------------*/
 
 .podcast-info {
