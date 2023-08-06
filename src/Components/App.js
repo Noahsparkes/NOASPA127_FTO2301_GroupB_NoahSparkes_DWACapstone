@@ -10,6 +10,10 @@ import ClipLoader from "react-spinners/ClipLoader";
 import FavoritesList from "./FavouriteList.js"
 import UnloadWarning from "./UnloadWarning.js"; 
 import PodcastPlayer from "./PodcastPlayer.js";
+//import Login from "./Login";
+
+
+
 
 //episodePlayer
 
@@ -77,6 +81,7 @@ const App = () => {
         <ClipLoader color={"#ff781f"} loading={loading} size={100} />
       ) : (
         <>
+       
           <head>
             {/* Rest of the header... */}
           </head>

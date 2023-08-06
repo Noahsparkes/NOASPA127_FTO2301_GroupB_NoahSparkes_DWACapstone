@@ -34,8 +34,11 @@ const PodcastList = ({ podcastInfo }) => {
           <p>
             <strong>Title:</strong> {podcastInfo.title}
           </p>
+
+          <p><strong>Genres: </strong>{podcastInfo.genres}</p>
+
           <p>
-            <strong>Description:</strong> {podcastInfo.description}m
+            <strong>Description:</strong> {podcastInfo.description}
           </p>
           {podcastInfo.seasons.slice(0, currentSeason + 1).map((season) => (
             <div key={season.season} className="season">
